@@ -1,0 +1,22 @@
+#voc转换到coco
+%cd /home/aistudio/work/PaddleDetection
+!python tools/x2coco.py \
+        --dataset_type voc \
+        --voc_anno_dir ./dataset/voc4/annotations/ \
+        --voc_anno_list ./dataset/voc4/valid1.txt \
+        --voc_label_list ./dataset/voc4/label_list.txt \
+        --voc_out_name ./dataset/coco2/annotations/valid.json
+
+!python tools/x2coco.py \
+        --dataset_type voc \
+        --voc_anno_dir ./dataset/voc4/annotations/ \
+        --voc_anno_list ./dataset/voc4/test1.txt \
+        --voc_label_list ./dataset/voc4/label_list.txt \
+        --voc_out_name ./dataset/coco2/annotations/test.json
+
+!python tools/x2coco.py \
+        --dataset_type voc \
+        --voc_anno_dir ./dataset/voc4/annotations/ \
+        --voc_anno_list ./dataset/voc4/train1.txt \
+        --voc_label_list ./dataset/voc4/label_list.txt \
+        --voc_out_name ./dataset/coco2/annotations/train.json

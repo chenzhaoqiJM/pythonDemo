@@ -1,0 +1,10 @@
+构建模块 python setup.py build
+安装模块 python setup.py install
+
+
+#发布给别人
+生成发布压缩包 python setup.py sdist
+
+进入文件夹，解压缩: tar -zxvf .....
+
+进入解压文件夹 python setup.py install

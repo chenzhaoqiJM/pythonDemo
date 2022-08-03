@@ -1,0 +1,10 @@
+创建一个项目：
+
+scrapy startproject python123demo
+
+
+生成一个爬虫
+scrapy genspider demo python123.io 
+
+运行生成的爬虫
+ scrapy crawl demo 

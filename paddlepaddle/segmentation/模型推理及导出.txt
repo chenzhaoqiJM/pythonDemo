@@ -1,0 +1,51 @@
+python predict.py --config configs/quick_start/bisenet_optic_disc_512x512_1k.yml --model_path output/best_model/model.pdparams --image_path docs/images/optic_test_image.jpg --save_dir output/result
+
+
+1.besenet,leimu--------------------------------------------------------------------------------------------------
+https://github.com/PaddlePaddle/PaddleSeg/blob/release/2.2/docs/quick_start_cn.md
+
+#leimu模型推理
+python predict.py --config configs/bisenet/bisenet_leimu_512x512_1k.yml --model_path output/leimu/best_model/model.pdparams  --save_dir output/leimu_result --image_path dataset/leimu/JPEGImages/8.jpg
+
+#模型导出
+python export.py --config configs/bisenet/bisenet_leimu_512x512_1k.yml --model_path output/leimu/best_model/model.pdparams --save_dir inference_model/leimu
+
+#部署推理
+#运行如下命令，会在output/leimu_result文件下面生成一张.png的图像
+python deploy/python/infer.py --config inference_model/leimu/deploy.yaml --save_dir output/leimu_result --image_path dataset/leimu/JPEGImages/8.jpg
+
+
+end----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

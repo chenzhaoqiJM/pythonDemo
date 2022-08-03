@@ -1,0 +1,4 @@
+    with open(os.path.join(base_path, 'test.txt'), 'wb') as f:
+        for image, annotation in zip(test_images, test_annotations):
+            line = images_target_dir + seperate + image + ' ' + annotations_target_dir + seperate + annotation 
+            f.writelines(line)
