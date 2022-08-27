@@ -7,7 +7,7 @@ import shutil
 
 if __name__ == '__main__':
     win_mode = False
-    base_path = 'E:\\dataset\\tok1'
+    base_path = 'C:\\Users\\hp\\Desktop\\4_rect_1'
     
     images_source_dir = 'leftImg8bit'
     annotations_source_dir = 'gtFine'
@@ -15,7 +15,7 @@ if __name__ == '__main__':
     source_format = '.jpg'
     annotation_format = '.png'
 
-    train_ratio = 0.8; val_ratio = 0.2; test_ratio = 0.0
+    train_ratio = 0.9; val_ratio = 0.1; test_ratio = 0.0
             
     #获取源图片文件名列表
     images_list_all = os.listdir(os.path.join(base_path, images_source_dir) )
