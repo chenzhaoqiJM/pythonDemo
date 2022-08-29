@@ -1,6 +1,6 @@
 #生成标注的图片  
 python tools/labelme2seg.py <PATH/TO/LABEL_JSON_FILE>
-python .\tools\labelme2seg.py ..\..\..\..\dataset\tok\JPEGImages\
+python .\tools\labelme2seg.py C:\Users\hp\Desktop\4_rect\JPEGImages
 
 #划分数据集
 python tools/split_dataset_list.py <dataset_root> <images_dir_name> <labels_dir_name> ${FLAGS}
