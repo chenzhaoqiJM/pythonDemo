@@ -54,6 +54,7 @@ if __name__ == '__main__':
         new_dir = os.path.join(base_path, annotations_target_dir)
         shutil.move(old_dir, new_dir)
         
+        
     #删除源文件夹
 
     

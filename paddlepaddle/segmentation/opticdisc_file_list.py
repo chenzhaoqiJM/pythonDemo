@@ -7,7 +7,7 @@ import shutil
 
 if __name__ == '__main__':
     win_mode = False
-    base_path = 'C:\\Users\\hp\\Desktop\\4_rect_1'
+    base_path = 'C:\\Users\\hp\\Desktop\\4_rect_1\\1024'
     
     images_source_dir = 'leftImg8bit'
     annotations_source_dir = 'gtFine'
@@ -22,14 +22,14 @@ if __name__ == '__main__':
     images_list = []
     #清除文件夹名字
     for item in images_list_all:
-        if len(item)>=4 and item[-4:] == source_format:
+        if len(item)>=4 and item.split('.')[-1] == source_format.split('.')[-1]:
             images_list.append(item)
     #获取标注图片文件名列表
     annotations_list_all = os.listdir(os.path.join(base_path, annotations_source_dir) )
     annotations_list = []
     #清除文件夹名字
     for item in annotations_list_all:
-        if len(item)>=4 and item[-4:] == annotation_format:
+        if len(item)>=4 and item.split('.')[-1] == annotation_format.split('.')[-1]:
             annotations_list.append(item)
     
     #检查一下文件是否对应
