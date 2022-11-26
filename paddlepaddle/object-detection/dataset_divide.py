@@ -5,9 +5,11 @@ import random
 
 
 if __name__ == '__main__':
-    images_path = 'E:\\训练数据集\\tubel\\images'
-    base_path = 'E:\\训练数据集\\tubel'
-    annotations_path = 'E:\\训练数据集\\tubel\\annotations'
+    images_path = r'C:\Users\hp\Desktop\4_detection\0du'
+    base_path = r'C:\Users\hp\Desktop\4_detection'
+    annotations_path = r'C:\Users\hp\Desktop\4_detection\annotations'
+    
+    imgs_dir = '0du'
 
     images_name_list = os.listdir(images_path)
     annotations_name_list = os.listdir(annotations_path)
@@ -15,9 +17,9 @@ if __name__ == '__main__':
     if(len(images_name_list) != len(annotations_name_list)):
         print('图片与标签的数量不一致，请检查是否有问题！！！')
     
-    train_ratio = 0.8
+    train_ratio = 0.9
     val_ratio = 0.1
-    test_ratio = 0.1
+    test_ratio = 0.0
     
     #得到训练集等的大小
     val_size = int(val_ratio*len(images_name_list))
@@ -59,7 +61,7 @@ if __name__ == '__main__':
     text_temp = '' 
     with open(os.path.join(base_path,train_file_name), 'wb') as f:
         for item in train_images:
-            text_temp = './images/' + item + ' ' + './annotations/' + item.split('.')[0] + '.xml' + '\n'
+            text_temp = './'+imgs_dir+'/' + item + ' ' + './annotations/' + item.split('.')[0] + '.xml' + '\n'
             f.write(text_temp.encode())
             train_annotations_name.append(item.split('.')[0])
     
@@ -67,7 +69,7 @@ if __name__ == '__main__':
     text_temp = '' 
     with open(os.path.join(base_path, val_file_name), 'wb') as f:
         for item in val_images:
-            text_temp = './images/' + item + ' ' + './annotations/' + item.split('.')[0] + '.xml' + '\n'
+            text_temp = './'+imgs_dir+'/' + item + ' ' + './annotations/' + item.split('.')[0] + '.xml' + '\n'
             f.write(text_temp.encode())
             val_annotations_name.append(item.split('.')[0])
             
@@ -75,7 +77,7 @@ if __name__ == '__main__':
     text_temp = '' 
     with open(os.path.join(base_path, test_file_name), 'wb') as f:
         for item in test_images:
-            text_temp = './images/' + item + ' ' + './annotations/' + item.split('.')[0] + '.xml' + '\n'
+            text_temp = './'+imgs_dir+'/' + item + ' ' + './annotations/' + item.split('.')[0] + '.xml' + '\n'
             f.write(text_temp.encode())
             test_annotations_name.append(item.split('.')[0])
             
