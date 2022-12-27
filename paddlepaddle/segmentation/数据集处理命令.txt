@@ -1,6 +1,6 @@
 #生成标注的图片  
 python tools/labelme2seg.py <PATH/TO/LABEL_JSON_FILE>
-python .\tools\labelme2seg.py C:\Users\hp\Desktop\tc_data\2\rs\blister
+python .\tools\labelme2seg.py C:\Users\hp\Desktop\tc_data\2\rs\rust
 #划分数据集
 python tools/split_dataset_list.py <dataset_root> <images_dir_name> <labels_dir_name> ${FLAGS}
 python .\tools\split_dataset_list.py .\dataset\leimu\ JPEGImages Annotations --split 0.8 0.1 0.1 --format jpg png --label_class _background_ leimu

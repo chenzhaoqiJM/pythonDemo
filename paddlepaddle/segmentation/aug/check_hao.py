@@ -16,8 +16,8 @@ def rotate_and_resize_roi(img1, theta, scale_ratio=1):
 # imgs_path =  r'C:\Users\hp\Desktop\4_rect_1\1024_roi\leftImg8bit'
 # tag_path =  r"C:\Users\hp\Desktop\4_rect_1\1024_roi\gtFine"
 
-imgs_path =  r'C:\Users\hp\Desktop\4_aug\leftImg8bit'
-tag_path =  r"C:\Users\hp\Desktop\4_aug\gtFine"
+imgs_path =  r'C:\Users\hp\Desktop\tc_data\2\rs\rust'
+tag_path =  r"C:\Users\hp\Desktop\tc_data\2\rs\rust\annotations"
 
 imgs_name = []
 for _item in os.listdir(imgs_path):
