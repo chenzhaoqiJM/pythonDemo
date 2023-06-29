@@ -5,8 +5,8 @@ import random
 
 
 if __name__ == '__main__':
-    images_path = r'C:\Users\hp\Desktop\4_detection\0du'
     base_path = r'C:\Users\hp\Desktop\4_detection'
+    images_path = r'C:\Users\hp\Desktop\4_detection\0du'
     annotations_path = r'C:\Users\hp\Desktop\4_detection\annotations'
     
     imgs_dir = '0du'
